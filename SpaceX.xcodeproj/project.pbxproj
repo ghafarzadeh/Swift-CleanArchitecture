@@ -7,9 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		812A282727C0ED94000DD1BB /* RocketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A282527C0ED94000DD1BB /* RocketTableViewCell.swift */; };
+		812A282827C0ED94000DD1BB /* RocketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A282527C0ED94000DD1BB /* RocketTableViewCell.swift */; };
+		812A282927C0ED94000DD1BB /* RocketTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A282527C0ED94000DD1BB /* RocketTableViewCell.swift */; };
+		812A282A27C0ED94000DD1BB /* RocketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812A282627C0ED94000DD1BB /* RocketTableViewCell.xib */; };
+		812A282B27C0ED94000DD1BB /* RocketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812A282627C0ED94000DD1BB /* RocketTableViewCell.xib */; };
+		812A282C27C0ED94000DD1BB /* RocketTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 812A282627C0ED94000DD1BB /* RocketTableViewCell.xib */; };
+		812A282F27C0F2BB000DD1BB /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A282E27C0F2BB000DD1BB /* DesignableView.swift */; };
+		812A283027C0F2BB000DD1BB /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A282E27C0F2BB000DD1BB /* DesignableView.swift */; };
+		812A283127C0F2BB000DD1BB /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A282E27C0F2BB000DD1BB /* DesignableView.swift */; };
 		81B1801727C0D767009C29B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1801627C0D767009C29B7 /* AppDelegate.swift */; };
 		81B1801927C0D767009C29B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1801827C0D767009C29B7 /* SceneDelegate.swift */; };
-		81B1801B27C0D767009C29B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1801A27C0D767009C29B7 /* ViewController.swift */; };
 		81B1801E27C0D767009C29B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B1801C27C0D767009C29B7 /* Main.storyboard */; };
 		81B1802027C0D76B009C29B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81B1801F27C0D76B009C29B7 /* Assets.xcassets */; };
 		81B1802327C0D76B009C29B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B1802127C0D76B009C29B7 /* LaunchScreen.storyboard */; };
@@ -76,10 +84,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		812A282527C0ED94000DD1BB /* RocketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketTableViewCell.swift; sourceTree = "<group>"; };
+		812A282627C0ED94000DD1BB /* RocketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketTableViewCell.xib; sourceTree = "<group>"; };
+		812A282E27C0F2BB000DD1BB /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
 		81B1801327C0D767009C29B7 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B1801627C0D767009C29B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B1801827C0D767009C29B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		81B1801A27C0D767009C29B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		81B1801D27C0D767009C29B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		81B1801F27C0D76B009C29B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		81B1802227C0D76B009C29B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,6 +142,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		812A282327C0ECE1000DD1BB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				812A282D27C0F297000DD1BB /* CustomViews */,
+				812A282427C0ECEB000DD1BB /* Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		812A282427C0ECEB000DD1BB /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				812A282527C0ED94000DD1BB /* RocketTableViewCell.swift */,
+				812A282627C0ED94000DD1BB /* RocketTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		812A282D27C0F297000DD1BB /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				812A282E27C0F2BB000DD1BB /* DesignableView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		81B1800A27C0D766009C29B7 = {
 			isa = PBXGroup;
 			children = (
@@ -155,11 +191,11 @@
 		81B1801527C0D767009C29B7 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
+				812A282327C0ECE1000DD1BB /* View */,
 				81B1805327C0DD21009C29B7 /* Models */,
 				81B1805227C0DB0B009C29B7 /* Scene */,
-				81B1805127C0DA9E009C29B7 /* Worker */,
+				81B1805127C0DA9E009C29B7 /* Workers */,
 				81B1804627C0D82C009C29B7 /* App */,
-				81B1801A27C0D767009C29B7 /* ViewController.swift */,
 				81B1801C27C0D767009C29B7 /* Main.storyboard */,
 				81B1801F27C0D76B009C29B7 /* Assets.xcassets */,
 				81B1802127C0D76B009C29B7 /* LaunchScreen.storyboard */,
@@ -194,11 +230,11 @@
 			path = App;
 			sourceTree = "<group>";
 		};
-		81B1805127C0DA9E009C29B7 /* Worker */ = {
+		81B1805127C0DA9E009C29B7 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = Worker;
+			path = Workers;
 			sourceTree = "<group>";
 		};
 		81B1805227C0DB0B009C29B7 /* Scene */ = {
@@ -344,6 +380,7 @@
 				81B1802327C0D76B009C29B7 /* LaunchScreen.storyboard in Resources */,
 				81B1802027C0D76B009C29B7 /* Assets.xcassets in Resources */,
 				81B1801E27C0D767009C29B7 /* Main.storyboard in Resources */,
+				812A282A27C0ED94000DD1BB /* RocketTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +388,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812A282B27C0ED94000DD1BB /* RocketTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +396,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812A282C27C0ED94000DD1BB /* RocketTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +407,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81B1801B27C0D767009C29B7 /* ViewController.swift in Sources */,
 				81B1806527C0E1D1009C29B7 /* Thrust.swift in Sources */,
 				81B1801727C0D767009C29B7 /* AppDelegate.swift in Sources */,
 				81B1805927C0E0FD009C29B7 /* Diameter.swift in Sources */,
@@ -377,6 +415,8 @@
 				81B1807527C0E2E6009C29B7 /* PayloadWeight.swift in Sources */,
 				81B1806D27C0E237009C29B7 /* LandingLegs.swift in Sources */,
 				81B1805D27C0E13F009C29B7 /* Engines.swift in Sources */,
+				812A282F27C0F2BB000DD1BB /* DesignableView.swift in Sources */,
+				812A282727C0ED94000DD1BB /* RocketTableViewCell.swift in Sources */,
 				81B1806127C0E1A3009C29B7 /* ISP.swift in Sources */,
 				81B1801927C0D767009C29B7 /* SceneDelegate.swift in Sources */,
 				81B1806927C0E203009C29B7 /* FirstStage.swift in Sources */,
@@ -393,10 +433,12 @@
 				81B1802E27C0D76B009C29B7 /* SpaceXTests.swift in Sources */,
 				81B1805E27C0E13F009C29B7 /* Engines.swift in Sources */,
 				81B1808227C0E371009C29B7 /* CompositeFairing.swift in Sources */,
+				812A282827C0ED94000DD1BB /* RocketTableViewCell.swift in Sources */,
 				81B1807E27C0E33F009C29B7 /* Payloads.swift in Sources */,
 				81B1805A27C0E0FD009C29B7 /* Diameter.swift in Sources */,
 				81B1806227C0E1A3009C29B7 /* ISP.swift in Sources */,
 				81B1807627C0E2E6009C29B7 /* PayloadWeight.swift in Sources */,
+				812A283027C0F2BB000DD1BB /* DesignableView.swift in Sources */,
 				81B1806E27C0E237009C29B7 /* LandingLegs.swift in Sources */,
 				81B1806A27C0E203009C29B7 /* FirstStage.swift in Sources */,
 				81B1805627C0DDAF009C29B7 /* Rocket.swift in Sources */,
@@ -418,6 +460,8 @@
 				81B1805F27C0E13F009C29B7 /* Engines.swift in Sources */,
 				81B1805727C0DDAF009C29B7 /* Rocket.swift in Sources */,
 				81B1803A27C0D76B009C29B7 /* SpaceXUITestsLaunchTests.swift in Sources */,
+				812A283127C0F2BB000DD1BB /* DesignableView.swift in Sources */,
+				812A282927C0ED94000DD1BB /* RocketTableViewCell.swift in Sources */,
 				81B1807327C0E29D009C29B7 /* File.swift in Sources */,
 				81B1806327C0E1A3009C29B7 /* ISP.swift in Sources */,
 				81B1806F27C0E237009C29B7 /* LandingLegs.swift in Sources */,

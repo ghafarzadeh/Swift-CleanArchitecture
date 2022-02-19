@@ -20,12 +20,21 @@ enum RocketDetail
   {
     struct Request
     {
+        var id: String
     }
     struct Response
     {
+        var rocket: Rocket
     }
     struct ViewModel
     {
+        struct DisplatRocket {
+            var id : String
+            var name : String
+            var description : String
+            var flickr_images : [String]
+        }
+        var displayRocket: DisplatRocket
     }
   }
 }

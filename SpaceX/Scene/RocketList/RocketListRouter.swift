@@ -14,35 +14,28 @@ import UIKit
 
 @objc protocol RocketListRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToRocketDetail(segue: UIStoryboardSegue?)
 }
 
 protocol RocketListDataPassing
 {
-  var dataStore: RocketListDataStore? { get }
+    var dataStore: RocketListDataStore? { get }
 }
 
 class RocketListRouter: NSObject, RocketListRoutingLogic, RocketListDataPassing
 {
-  weak var viewController: RocketListViewController?
-  var dataStore: RocketListDataStore?
-  
-  // MARK: Routing
-  
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+    weak var viewController: RocketListViewController?
+    var dataStore: RocketListDataStore?
+    
+    // MARK: Routing
+    
+    func routeToRocketDetail(segue: UIStoryboardSegue?) {
+        if let segue = segue {
+            let destinationVC = segue.destination as! RocketDetailViewController
+            var destinationDS = destinationVC.router!.dataStore!
+            passDataTodetail(source: dataStore!, destination: &destinationDS)
+        }
+    }
 
   // MARK: Navigation
   
@@ -53,8 +46,8 @@ class RocketListRouter: NSObject, RocketListRoutingLogic, RocketListDataPassing
   
   // MARK: Passing data
   
-  //func passDataToSomewhere(source: RocketListDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+  func passDataTodetail(source: RocketListDataStore, destination: inout RocketDetailDataStore)
+  {
+      //destination.name = source.name
+  }
 }

@@ -58,9 +58,8 @@ class RocketListViewController: UIViewController, RocketListDisplayLogic
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)
     {
         if let scene = segue.identifier {
-            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-            if let router = router, router.responds(to: selector) {
-                router.perform(selector, with: segue)
+            if let router = router {
+                router.routeToRocketDetail(segue: segue)
             }
         }
     }
@@ -118,7 +117,7 @@ extension RocketListViewController : UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       
+        performSegue(withIdentifier: "goDetail", sender: [] )
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

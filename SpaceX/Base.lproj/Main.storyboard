@@ -28,12 +28,12 @@
         <!--Rocket List-->
         <scene sceneID="dAq-C1-8zV">
             <objects>
-                <viewController id="eqs-gH-ID3" sceneMemberID="viewController">
+                <viewController id="eqs-gH-ID3" customClass="RocketListViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G3M-wU-hGS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="alQ-Ig-P7g">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="alQ-Ig-P7g">
                                 <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -48,10 +48,30 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Rocket List" id="07Z-2A-Aik"/>
+                    <connections>
+                        <outlet property="tableView" destination="alQ-Ig-P7g" id="CfD-6H-vTv"/>
+                        <segue destination="k1a-Qa-0gg" kind="show" id="X0v-Pm-5Z4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bZd-wU-jJ5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1102.8985507246377" y="-11.383928571428571"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fXz-1H-6rz">
+            <objects>
+                <viewController id="k1a-Qa-0gg" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sR4-c6-gjo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="bWT-1m-bCf"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="92V-ng-WTe"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QVR-pA-nkI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2261" y="-11"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="uf9-BL-tuf">
@@ -71,11 +91,11 @@
             </objects>
             <point key="canvasLocation" x="-695" y="293"/>
         </scene>
-        <!--Item 1-->
+        <!--Roket List-->
         <scene sceneID="YS6-BP-JPr">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ogc-he-2Jz" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="IgI-bT-Gha"/>
+                    <tabBarItem key="tabBarItem" title="Roket List" image="homeIconTab" id="IgI-bT-Gha"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="cEV-RT-h4i">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
@@ -93,11 +113,11 @@
             </objects>
             <point key="canvasLocation" x="192.75362318840581" y="-11.383928571428571"/>
         </scene>
-        <!--Item 2-->
+        <!--Navigation Controller-->
         <scene sceneID="Xt9-Jg-484">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="rcR-ci-edb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="yqU-qo-n5f"/>
+                    <tabBarItem key="tabBarItem" systemItem="favorites" id="yqU-qo-n5f"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Hi3-kc-kQK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -114,6 +134,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="homeIconTab" width="27" height="26"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

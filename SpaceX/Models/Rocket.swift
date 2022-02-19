@@ -21,7 +21,7 @@ struct Rocket: Codable {
     let stages, boosters, costPerLaunch, successRatePct: Int
     let firstFlight, country, company: String
     let wikipedia: String
-    let welcomeDescription, id: String
+    let description, id: String
 
     enum CodingKeys: String, CodingKey {
         case height, diameter, mass
@@ -36,7 +36,7 @@ struct Rocket: Codable {
         case successRatePct = "success_rate_pct"
         case firstFlight = "first_flight"
         case country, company, wikipedia
-        case welcomeDescription = "description"
+        case description = "description"
         case id
     }
 }

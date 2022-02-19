@@ -16,6 +16,33 @@
 		812A282F27C0F2BB000DD1BB /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A282E27C0F2BB000DD1BB /* DesignableView.swift */; };
 		812A283027C0F2BB000DD1BB /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A282E27C0F2BB000DD1BB /* DesignableView.swift */; };
 		812A283127C0F2BB000DD1BB /* DesignableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A282E27C0F2BB000DD1BB /* DesignableView.swift */; };
+		812A283827C0FDC8000DD1BB /* RocketListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283227C0FDC8000DD1BB /* RocketListPresenter.swift */; };
+		812A283927C0FDC8000DD1BB /* RocketListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283227C0FDC8000DD1BB /* RocketListPresenter.swift */; };
+		812A283A27C0FDC8000DD1BB /* RocketListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283227C0FDC8000DD1BB /* RocketListPresenter.swift */; };
+		812A283B27C0FDC8000DD1BB /* RocketListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283327C0FDC8000DD1BB /* RocketListWorker.swift */; };
+		812A283C27C0FDC8000DD1BB /* RocketListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283327C0FDC8000DD1BB /* RocketListWorker.swift */; };
+		812A283D27C0FDC8000DD1BB /* RocketListWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283327C0FDC8000DD1BB /* RocketListWorker.swift */; };
+		812A283E27C0FDC8000DD1BB /* RocketListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283427C0FDC8000DD1BB /* RocketListRouter.swift */; };
+		812A283F27C0FDC8000DD1BB /* RocketListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283427C0FDC8000DD1BB /* RocketListRouter.swift */; };
+		812A284027C0FDC8000DD1BB /* RocketListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283427C0FDC8000DD1BB /* RocketListRouter.swift */; };
+		812A284127C0FDC8000DD1BB /* RocketListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283527C0FDC8000DD1BB /* RocketListModels.swift */; };
+		812A284227C0FDC8000DD1BB /* RocketListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283527C0FDC8000DD1BB /* RocketListModels.swift */; };
+		812A284327C0FDC8000DD1BB /* RocketListModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283527C0FDC8000DD1BB /* RocketListModels.swift */; };
+		812A284427C0FDC8000DD1BB /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283627C0FDC8000DD1BB /* RocketListViewController.swift */; };
+		812A284527C0FDC8000DD1BB /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283627C0FDC8000DD1BB /* RocketListViewController.swift */; };
+		812A284627C0FDC8000DD1BB /* RocketListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283627C0FDC8000DD1BB /* RocketListViewController.swift */; };
+		812A284727C0FDC8000DD1BB /* RocketListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283727C0FDC8000DD1BB /* RocketListInteractor.swift */; };
+		812A284827C0FDC8000DD1BB /* RocketListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283727C0FDC8000DD1BB /* RocketListInteractor.swift */; };
+		812A284927C0FDC8000DD1BB /* RocketListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A283727C0FDC8000DD1BB /* RocketListInteractor.swift */; };
+		812A284C27C12EB6000DD1BB /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A284B27C12EB4000DD1BB /* Api.swift */; };
+		812A284D27C12EB6000DD1BB /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A284B27C12EB4000DD1BB /* Api.swift */; };
+		812A284E27C12EB7000DD1BB /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A284B27C12EB4000DD1BB /* Api.swift */; };
+		812A285027C13108000DD1BB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A284F27C13108000DD1BB /* NetworkManager.swift */; };
+		812A285127C13109000DD1BB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A284F27C13108000DD1BB /* NetworkManager.swift */; };
+		812A285227C13109000DD1BB /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A284F27C13108000DD1BB /* NetworkManager.swift */; };
+		812A285427C13515000DD1BB /* RocketWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A285327C13513000DD1BB /* RocketWorker.swift */; };
+		812A285527C13515000DD1BB /* RocketWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A285327C13513000DD1BB /* RocketWorker.swift */; };
+		812A285627C13516000DD1BB /* RocketWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 812A285327C13513000DD1BB /* RocketWorker.swift */; };
 		81B1801727C0D767009C29B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1801627C0D767009C29B7 /* AppDelegate.swift */; };
 		81B1801927C0D767009C29B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1801827C0D767009C29B7 /* SceneDelegate.swift */; };
 		81B1801E27C0D767009C29B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B1801C27C0D767009C29B7 /* Main.storyboard */; };
@@ -87,6 +114,15 @@
 		812A282527C0ED94000DD1BB /* RocketTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketTableViewCell.swift; sourceTree = "<group>"; };
 		812A282627C0ED94000DD1BB /* RocketTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RocketTableViewCell.xib; sourceTree = "<group>"; };
 		812A282E27C0F2BB000DD1BB /* DesignableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableView.swift; sourceTree = "<group>"; };
+		812A283227C0FDC8000DD1BB /* RocketListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListPresenter.swift; sourceTree = "<group>"; };
+		812A283327C0FDC8000DD1BB /* RocketListWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListWorker.swift; sourceTree = "<group>"; };
+		812A283427C0FDC8000DD1BB /* RocketListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListRouter.swift; sourceTree = "<group>"; };
+		812A283527C0FDC8000DD1BB /* RocketListModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListModels.swift; sourceTree = "<group>"; };
+		812A283627C0FDC8000DD1BB /* RocketListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListViewController.swift; sourceTree = "<group>"; };
+		812A283727C0FDC8000DD1BB /* RocketListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketListInteractor.swift; sourceTree = "<group>"; };
+		812A284B27C12EB4000DD1BB /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
+		812A284F27C13108000DD1BB /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		812A285327C13513000DD1BB /* RocketWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketWorker.swift; sourceTree = "<group>"; };
 		81B1801327C0D767009C29B7 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B1801627C0D767009C29B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B1801827C0D767009C29B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -168,6 +204,19 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		812A284A27C0FDD5000DD1BB /* RocketList */ = {
+			isa = PBXGroup;
+			children = (
+				812A283227C0FDC8000DD1BB /* RocketListPresenter.swift */,
+				812A283327C0FDC8000DD1BB /* RocketListWorker.swift */,
+				812A283427C0FDC8000DD1BB /* RocketListRouter.swift */,
+				812A283527C0FDC8000DD1BB /* RocketListModels.swift */,
+				812A283627C0FDC8000DD1BB /* RocketListViewController.swift */,
+				812A283727C0FDC8000DD1BB /* RocketListInteractor.swift */,
+			);
+			path = RocketList;
+			sourceTree = "<group>";
+		};
 		81B1800A27C0D766009C29B7 = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +282,9 @@
 		81B1805127C0DA9E009C29B7 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				812A284B27C12EB4000DD1BB /* Api.swift */,
+				812A284F27C13108000DD1BB /* NetworkManager.swift */,
+				812A285327C13513000DD1BB /* RocketWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -240,6 +292,7 @@
 		81B1805227C0DB0B009C29B7 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				812A284A27C0FDD5000DD1BB /* RocketList */,
 			);
 			path = Scene;
 			sourceTree = "<group>";
@@ -411,17 +464,26 @@
 				81B1801727C0D767009C29B7 /* AppDelegate.swift in Sources */,
 				81B1805927C0E0FD009C29B7 /* Diameter.swift in Sources */,
 				81B1807D27C0E33F009C29B7 /* Payloads.swift in Sources */,
+				812A285427C13515000DD1BB /* RocketWorker.swift in Sources */,
 				81B1808127C0E371009C29B7 /* CompositeFairing.swift in Sources */,
+				812A284C27C12EB6000DD1BB /* Api.swift in Sources */,
 				81B1807527C0E2E6009C29B7 /* PayloadWeight.swift in Sources */,
 				81B1806D27C0E237009C29B7 /* LandingLegs.swift in Sources */,
 				81B1805D27C0E13F009C29B7 /* Engines.swift in Sources */,
 				812A282F27C0F2BB000DD1BB /* DesignableView.swift in Sources */,
+				812A284127C0FDC8000DD1BB /* RocketListModels.swift in Sources */,
+				812A283827C0FDC8000DD1BB /* RocketListPresenter.swift in Sources */,
+				812A285027C13108000DD1BB /* NetworkManager.swift in Sources */,
+				812A284427C0FDC8000DD1BB /* RocketListViewController.swift in Sources */,
 				812A282727C0ED94000DD1BB /* RocketTableViewCell.swift in Sources */,
 				81B1806127C0E1A3009C29B7 /* ISP.swift in Sources */,
 				81B1801927C0D767009C29B7 /* SceneDelegate.swift in Sources */,
+				812A283B27C0FDC8000DD1BB /* RocketListWorker.swift in Sources */,
+				812A283E27C0FDC8000DD1BB /* RocketListRouter.swift in Sources */,
 				81B1806927C0E203009C29B7 /* FirstStage.swift in Sources */,
 				81B1807127C0E29D009C29B7 /* File.swift in Sources */,
 				81B1805527C0DDAE009C29B7 /* Rocket.swift in Sources */,
+				812A284727C0FDC8000DD1BB /* RocketListInteractor.swift in Sources */,
 				81B1807927C0E311009C29B7 /* SecondStage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -430,21 +492,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				812A285127C13109000DD1BB /* NetworkManager.swift in Sources */,
+				812A283927C0FDC8000DD1BB /* RocketListPresenter.swift in Sources */,
+				812A284827C0FDC8000DD1BB /* RocketListInteractor.swift in Sources */,
 				81B1802E27C0D76B009C29B7 /* SpaceXTests.swift in Sources */,
 				81B1805E27C0E13F009C29B7 /* Engines.swift in Sources */,
 				81B1808227C0E371009C29B7 /* CompositeFairing.swift in Sources */,
 				812A282827C0ED94000DD1BB /* RocketTableViewCell.swift in Sources */,
+				812A284227C0FDC8000DD1BB /* RocketListModels.swift in Sources */,
 				81B1807E27C0E33F009C29B7 /* Payloads.swift in Sources */,
+				812A283F27C0FDC8000DD1BB /* RocketListRouter.swift in Sources */,
 				81B1805A27C0E0FD009C29B7 /* Diameter.swift in Sources */,
 				81B1806227C0E1A3009C29B7 /* ISP.swift in Sources */,
 				81B1807627C0E2E6009C29B7 /* PayloadWeight.swift in Sources */,
 				812A283027C0F2BB000DD1BB /* DesignableView.swift in Sources */,
+				812A284527C0FDC8000DD1BB /* RocketListViewController.swift in Sources */,
+				812A285527C13515000DD1BB /* RocketWorker.swift in Sources */,
 				81B1806E27C0E237009C29B7 /* LandingLegs.swift in Sources */,
 				81B1806A27C0E203009C29B7 /* FirstStage.swift in Sources */,
+				812A284D27C12EB6000DD1BB /* Api.swift in Sources */,
 				81B1805627C0DDAF009C29B7 /* Rocket.swift in Sources */,
 				81B1807A27C0E311009C29B7 /* SecondStage.swift in Sources */,
 				81B1807227C0E29D009C29B7 /* File.swift in Sources */,
 				81B1806627C0E1D1009C29B7 /* Thrust.swift in Sources */,
+				812A283C27C0FDC8000DD1BB /* RocketListWorker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -456,17 +527,26 @@
 				81B1807B27C0E311009C29B7 /* SecondStage.swift in Sources */,
 				81B1806727C0E1D1009C29B7 /* Thrust.swift in Sources */,
 				81B1805B27C0E0FD009C29B7 /* Diameter.swift in Sources */,
+				812A285627C13516000DD1BB /* RocketWorker.swift in Sources */,
 				81B1807F27C0E33F009C29B7 /* Payloads.swift in Sources */,
+				812A284E27C12EB7000DD1BB /* Api.swift in Sources */,
 				81B1805F27C0E13F009C29B7 /* Engines.swift in Sources */,
 				81B1805727C0DDAF009C29B7 /* Rocket.swift in Sources */,
 				81B1803A27C0D76B009C29B7 /* SpaceXUITestsLaunchTests.swift in Sources */,
 				812A283127C0F2BB000DD1BB /* DesignableView.swift in Sources */,
+				812A284327C0FDC8000DD1BB /* RocketListModels.swift in Sources */,
+				812A283A27C0FDC8000DD1BB /* RocketListPresenter.swift in Sources */,
+				812A285227C13109000DD1BB /* NetworkManager.swift in Sources */,
+				812A284627C0FDC8000DD1BB /* RocketListViewController.swift in Sources */,
 				812A282927C0ED94000DD1BB /* RocketTableViewCell.swift in Sources */,
 				81B1807327C0E29D009C29B7 /* File.swift in Sources */,
 				81B1806327C0E1A3009C29B7 /* ISP.swift in Sources */,
+				812A283D27C0FDC8000DD1BB /* RocketListWorker.swift in Sources */,
+				812A284027C0FDC8000DD1BB /* RocketListRouter.swift in Sources */,
 				81B1806F27C0E237009C29B7 /* LandingLegs.swift in Sources */,
 				81B1803827C0D76B009C29B7 /* SpaceXUITests.swift in Sources */,
 				81B1807727C0E2E6009C29B7 /* PayloadWeight.swift in Sources */,
+				812A284927C0FDC8000DD1BB /* RocketListInteractor.swift in Sources */,
 				81B1806B27C0E203009C29B7 /* FirstStage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

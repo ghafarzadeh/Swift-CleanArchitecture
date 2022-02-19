@@ -20,6 +20,42 @@
 		81B1804B27C0DA1E009C29B7 /* ReactiveMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 81B1804A27C0DA1E009C29B7 /* ReactiveMoya */; };
 		81B1804D27C0DA1E009C29B7 /* RxMoya in Frameworks */ = {isa = PBXBuildFile; productRef = 81B1804C27C0DA1E009C29B7 /* RxMoya */; };
 		81B1805027C0DA86009C29B7 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 81B1804F27C0DA86009C29B7 /* SDWebImage */; };
+		81B1805527C0DDAE009C29B7 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1805427C0DDAE009C29B7 /* Rocket.swift */; };
+		81B1805627C0DDAF009C29B7 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1805427C0DDAE009C29B7 /* Rocket.swift */; };
+		81B1805727C0DDAF009C29B7 /* Rocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1805427C0DDAE009C29B7 /* Rocket.swift */; };
+		81B1805927C0E0FD009C29B7 /* Diameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1805827C0E0FD009C29B7 /* Diameter.swift */; };
+		81B1805A27C0E0FD009C29B7 /* Diameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1805827C0E0FD009C29B7 /* Diameter.swift */; };
+		81B1805B27C0E0FD009C29B7 /* Diameter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1805827C0E0FD009C29B7 /* Diameter.swift */; };
+		81B1805D27C0E13F009C29B7 /* Engines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1805C27C0E13F009C29B7 /* Engines.swift */; };
+		81B1805E27C0E13F009C29B7 /* Engines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1805C27C0E13F009C29B7 /* Engines.swift */; };
+		81B1805F27C0E13F009C29B7 /* Engines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1805C27C0E13F009C29B7 /* Engines.swift */; };
+		81B1806127C0E1A3009C29B7 /* ISP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806027C0E1A3009C29B7 /* ISP.swift */; };
+		81B1806227C0E1A3009C29B7 /* ISP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806027C0E1A3009C29B7 /* ISP.swift */; };
+		81B1806327C0E1A3009C29B7 /* ISP.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806027C0E1A3009C29B7 /* ISP.swift */; };
+		81B1806527C0E1D1009C29B7 /* Thrust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806427C0E1D1009C29B7 /* Thrust.swift */; };
+		81B1806627C0E1D1009C29B7 /* Thrust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806427C0E1D1009C29B7 /* Thrust.swift */; };
+		81B1806727C0E1D1009C29B7 /* Thrust.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806427C0E1D1009C29B7 /* Thrust.swift */; };
+		81B1806927C0E203009C29B7 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806827C0E203009C29B7 /* FirstStage.swift */; };
+		81B1806A27C0E203009C29B7 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806827C0E203009C29B7 /* FirstStage.swift */; };
+		81B1806B27C0E203009C29B7 /* FirstStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806827C0E203009C29B7 /* FirstStage.swift */; };
+		81B1806D27C0E237009C29B7 /* LandingLegs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806C27C0E236009C29B7 /* LandingLegs.swift */; };
+		81B1806E27C0E237009C29B7 /* LandingLegs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806C27C0E236009C29B7 /* LandingLegs.swift */; };
+		81B1806F27C0E237009C29B7 /* LandingLegs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1806C27C0E236009C29B7 /* LandingLegs.swift */; };
+		81B1807127C0E29D009C29B7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807027C0E29C009C29B7 /* File.swift */; };
+		81B1807227C0E29D009C29B7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807027C0E29C009C29B7 /* File.swift */; };
+		81B1807327C0E29D009C29B7 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807027C0E29C009C29B7 /* File.swift */; };
+		81B1807527C0E2E6009C29B7 /* PayloadWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807427C0E2E6009C29B7 /* PayloadWeight.swift */; };
+		81B1807627C0E2E6009C29B7 /* PayloadWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807427C0E2E6009C29B7 /* PayloadWeight.swift */; };
+		81B1807727C0E2E6009C29B7 /* PayloadWeight.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807427C0E2E6009C29B7 /* PayloadWeight.swift */; };
+		81B1807927C0E311009C29B7 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807827C0E310009C29B7 /* SecondStage.swift */; };
+		81B1807A27C0E311009C29B7 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807827C0E310009C29B7 /* SecondStage.swift */; };
+		81B1807B27C0E311009C29B7 /* SecondStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807827C0E310009C29B7 /* SecondStage.swift */; };
+		81B1807D27C0E33F009C29B7 /* Payloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807C27C0E33F009C29B7 /* Payloads.swift */; };
+		81B1807E27C0E33F009C29B7 /* Payloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807C27C0E33F009C29B7 /* Payloads.swift */; };
+		81B1807F27C0E33F009C29B7 /* Payloads.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1807C27C0E33F009C29B7 /* Payloads.swift */; };
+		81B1808127C0E371009C29B7 /* CompositeFairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1808027C0E371009C29B7 /* CompositeFairing.swift */; };
+		81B1808227C0E371009C29B7 /* CompositeFairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1808027C0E371009C29B7 /* CompositeFairing.swift */; };
+		81B1808327C0E371009C29B7 /* CompositeFairing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1808027C0E371009C29B7 /* CompositeFairing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +89,18 @@
 		81B1803327C0D76B009C29B7 /* SpaceXUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B1803727C0D76B009C29B7 /* SpaceXUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXUITests.swift; sourceTree = "<group>"; };
 		81B1803927C0D76B009C29B7 /* SpaceXUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpaceXUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		81B1805427C0DDAE009C29B7 /* Rocket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rocket.swift; sourceTree = "<group>"; };
+		81B1805827C0E0FD009C29B7 /* Diameter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diameter.swift; sourceTree = "<group>"; };
+		81B1805C27C0E13F009C29B7 /* Engines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Engines.swift; sourceTree = "<group>"; };
+		81B1806027C0E1A3009C29B7 /* ISP.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ISP.swift; sourceTree = "<group>"; };
+		81B1806427C0E1D1009C29B7 /* Thrust.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thrust.swift; sourceTree = "<group>"; };
+		81B1806827C0E203009C29B7 /* FirstStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstStage.swift; sourceTree = "<group>"; };
+		81B1806C27C0E236009C29B7 /* LandingLegs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingLegs.swift; sourceTree = "<group>"; };
+		81B1807027C0E29C009C29B7 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		81B1807427C0E2E6009C29B7 /* PayloadWeight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayloadWeight.swift; sourceTree = "<group>"; };
+		81B1807827C0E310009C29B7 /* SecondStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStage.swift; sourceTree = "<group>"; };
+		81B1807C27C0E33F009C29B7 /* Payloads.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Payloads.swift; sourceTree = "<group>"; };
+		81B1808027C0E371009C29B7 /* CompositeFairing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompositeFairing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +155,7 @@
 		81B1801527C0D767009C29B7 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
+				81B1805327C0DD21009C29B7 /* Models */,
 				81B1805227C0DB0B009C29B7 /* Scene */,
 				81B1805127C0DA9E009C29B7 /* Worker */,
 				81B1804627C0D82C009C29B7 /* App */,
@@ -157,6 +206,25 @@
 			children = (
 			);
 			path = Scene;
+			sourceTree = "<group>";
+		};
+		81B1805327C0DD21009C29B7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				81B1805427C0DDAE009C29B7 /* Rocket.swift */,
+				81B1805827C0E0FD009C29B7 /* Diameter.swift */,
+				81B1805C27C0E13F009C29B7 /* Engines.swift */,
+				81B1806027C0E1A3009C29B7 /* ISP.swift */,
+				81B1806427C0E1D1009C29B7 /* Thrust.swift */,
+				81B1806827C0E203009C29B7 /* FirstStage.swift */,
+				81B1806C27C0E236009C29B7 /* LandingLegs.swift */,
+				81B1807027C0E29C009C29B7 /* File.swift */,
+				81B1807427C0E2E6009C29B7 /* PayloadWeight.swift */,
+				81B1807827C0E310009C29B7 /* SecondStage.swift */,
+				81B1807C27C0E33F009C29B7 /* Payloads.swift */,
+				81B1808027C0E371009C29B7 /* CompositeFairing.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,8 +369,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				81B1801B27C0D767009C29B7 /* ViewController.swift in Sources */,
+				81B1806527C0E1D1009C29B7 /* Thrust.swift in Sources */,
 				81B1801727C0D767009C29B7 /* AppDelegate.swift in Sources */,
+				81B1805927C0E0FD009C29B7 /* Diameter.swift in Sources */,
+				81B1807D27C0E33F009C29B7 /* Payloads.swift in Sources */,
+				81B1808127C0E371009C29B7 /* CompositeFairing.swift in Sources */,
+				81B1807527C0E2E6009C29B7 /* PayloadWeight.swift in Sources */,
+				81B1806D27C0E237009C29B7 /* LandingLegs.swift in Sources */,
+				81B1805D27C0E13F009C29B7 /* Engines.swift in Sources */,
+				81B1806127C0E1A3009C29B7 /* ISP.swift in Sources */,
 				81B1801927C0D767009C29B7 /* SceneDelegate.swift in Sources */,
+				81B1806927C0E203009C29B7 /* FirstStage.swift in Sources */,
+				81B1807127C0E29D009C29B7 /* File.swift in Sources */,
+				81B1805527C0DDAE009C29B7 /* Rocket.swift in Sources */,
+				81B1807927C0E311009C29B7 /* SecondStage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -311,6 +391,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				81B1802E27C0D76B009C29B7 /* SpaceXTests.swift in Sources */,
+				81B1805E27C0E13F009C29B7 /* Engines.swift in Sources */,
+				81B1808227C0E371009C29B7 /* CompositeFairing.swift in Sources */,
+				81B1807E27C0E33F009C29B7 /* Payloads.swift in Sources */,
+				81B1805A27C0E0FD009C29B7 /* Diameter.swift in Sources */,
+				81B1806227C0E1A3009C29B7 /* ISP.swift in Sources */,
+				81B1807627C0E2E6009C29B7 /* PayloadWeight.swift in Sources */,
+				81B1806E27C0E237009C29B7 /* LandingLegs.swift in Sources */,
+				81B1806A27C0E203009C29B7 /* FirstStage.swift in Sources */,
+				81B1805627C0DDAF009C29B7 /* Rocket.swift in Sources */,
+				81B1807A27C0E311009C29B7 /* SecondStage.swift in Sources */,
+				81B1807227C0E29D009C29B7 /* File.swift in Sources */,
+				81B1806627C0E1D1009C29B7 /* Thrust.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,8 +410,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81B1808327C0E371009C29B7 /* CompositeFairing.swift in Sources */,
+				81B1807B27C0E311009C29B7 /* SecondStage.swift in Sources */,
+				81B1806727C0E1D1009C29B7 /* Thrust.swift in Sources */,
+				81B1805B27C0E0FD009C29B7 /* Diameter.swift in Sources */,
+				81B1807F27C0E33F009C29B7 /* Payloads.swift in Sources */,
+				81B1805F27C0E13F009C29B7 /* Engines.swift in Sources */,
+				81B1805727C0DDAF009C29B7 /* Rocket.swift in Sources */,
 				81B1803A27C0D76B009C29B7 /* SpaceXUITestsLaunchTests.swift in Sources */,
+				81B1807327C0E29D009C29B7 /* File.swift in Sources */,
+				81B1806327C0E1A3009C29B7 /* ISP.swift in Sources */,
+				81B1806F27C0E237009C29B7 /* LandingLegs.swift in Sources */,
 				81B1803827C0D76B009C29B7 /* SpaceXUITests.swift in Sources */,
+				81B1807727C0E2E6009C29B7 /* PayloadWeight.swift in Sources */,
+				81B1806B27C0E203009C29B7 /* FirstStage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

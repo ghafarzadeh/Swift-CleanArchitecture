@@ -14,7 +14,7 @@ import UIKit
 
 protocol FavoriteBusinessLogic
 {
-    func getRockestList(request: Favorite.Something.Request)
+    func getRockestList(request: Favorite.getFavoriteList.Request)
 }
 
 protocol FavoriteDataStore

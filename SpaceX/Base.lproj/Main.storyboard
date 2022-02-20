@@ -45,7 +45,7 @@
         <!--Rocket List-->
         <scene sceneID="dAq-C1-8zV">
             <objects>
-                <viewController id="eqs-gH-ID3" customClass="RocketListViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="RocketListViewController" id="eqs-gH-ID3" customClass="RocketListViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="G3M-wU-hGS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,7 +339,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PKs-ZJ-IqX"/>
+        <segue reference="X0v-Pm-5Z4"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="homeIconTab" width="27" height="26"/>

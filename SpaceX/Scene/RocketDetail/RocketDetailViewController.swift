@@ -13,6 +13,7 @@
 import UIKit
 import ImageSlideshow
 import ImageSlideshowSDWebImage
+import SDWebImage
 
 protocol RocketDetailDisplayLogic: class
 {

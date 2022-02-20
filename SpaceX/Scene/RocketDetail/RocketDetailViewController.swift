@@ -14,7 +14,7 @@ import UIKit
 
 protocol RocketDetailDisplayLogic: class
 {
-  func displaySomething(viewModel: RocketDetail.Something.ViewModel)
+    func displayDetail(viewModel: RocketDetail.Roket.ViewModel)
 }
 
 class RocketDetailViewController: UIViewController, RocketDetailDisplayLogic
@@ -69,7 +69,7 @@ class RocketDetailViewController: UIViewController, RocketDetailDisplayLogic
   override func viewDidLoad()
   {
     super.viewDidLoad()
-    doSomething()
+    getDetail()
   }
   
   // MARK: Do something
@@ -78,15 +78,19 @@ class RocketDetailViewController: UIViewController, RocketDetailDisplayLogic
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var btnFavorite: UIButton!
   
-  func doSomething()
-  {
-    let request = RocketDetail.Something.Request()
-    interactor?.doSomething(request: request)
-  }
+    func getDetail()
+    {
+        if let id = self.router?.dataStore?.id {
+            let request = RocketDetail.Roket.Request(id: id)
+            interactor?.getDetail(request: request)
+        }
+    }
   
-  func displaySomething(viewModel: RocketDetail.Something.ViewModel)
+    func displayDetail(viewModel: RocketDetail.Roket.ViewModel)
   {
-    //nameTextField.text = viewModel.name
+      let detail = viewModel.displayRocket
+      self.lblName.text = detail.name
+      self.lblDescription.text = detail.description
   }
     
     @IBAction func FavoriteAct(_ sender: Any) {

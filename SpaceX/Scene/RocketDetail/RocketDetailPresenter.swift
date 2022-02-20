@@ -28,6 +28,6 @@ class RocketDetailPresenter: RocketDetailPresentationLogic
         let detail = response.rocket
         let model = RocketDetail.Roket.ViewModel.DisplatRocket(id: detail.id, name: detail.name, description: detail.description, flickr_images: detail.flickrImages)
         let viewModel = RocketDetail.Roket.ViewModel(displayRocket: model)
-        viewController?.displaySomething(viewModel: viewModel)
+        viewController?.displayDetail(viewModel: viewModel)
     }
 }

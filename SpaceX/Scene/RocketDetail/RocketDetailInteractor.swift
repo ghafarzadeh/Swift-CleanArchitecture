@@ -35,7 +35,7 @@ class RocketDetailInteractor: RocketDetailBusinessLogic, RocketDetailDataStore
         worker = RocketWorker()
         worker?.getRocketDetail(id: self.id, completionHandler: { detail in
             let response = RocketDetail.Roket.Response(rocket: detail)
-            presenter?.presentDetail(response: response)
+            self.presenter?.presentDetail(response: response)
         }, failure: { error in
             print(error)
         })

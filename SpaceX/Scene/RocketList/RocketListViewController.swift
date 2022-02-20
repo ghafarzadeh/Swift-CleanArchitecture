@@ -59,7 +59,7 @@ class RocketListViewController: UIViewController, RocketListDisplayLogic
     {
         if let scene = segue.identifier {
             if let router = router {
-                router.routeToRocketDetail(segue: segue)
+                router.routeToRocketDetail(segue: segue, sender: sender)
             }
         }
     }
@@ -117,7 +117,8 @@ extension RocketListViewController : UITableViewDelegate, UITableViewDataSource 
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "goDetail", sender: [] )
+        let id = rocketList[indexPath.row].id
+        performSegue(withIdentifier: "goDetail", sender: ["id" : id ] )
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -32,7 +32,7 @@ class RocketWorker : RocketStoreProtocol {
     }
     
     func getRocketDetail(id: String, completionHandler: @escaping RocketDetailHandler, failure: @escaping ErrorHandler) {
-        NetworkManager.shared.request(SpaceXService.getRocketList) { (response : Rocket) in
+        NetworkManager.shared.request(SpaceXService.getRocketDetail(id: id)) { (response : Rocket) in
             completionHandler(response)
         } failure: { error in
             failure(error.localizedDescription)

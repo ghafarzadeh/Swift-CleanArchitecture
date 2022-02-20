@@ -14,7 +14,7 @@ import UIKit
 
 @objc protocol RocketListRoutingLogic
 {
-    func routeToRocketDetail(segue: UIStoryboardSegue?)
+    func routeToRocketDetail(segue: UIStoryboardSegue?, sender: Any)
 }
 
 protocol RocketListDataPassing
@@ -29,11 +29,14 @@ class RocketListRouter: NSObject, RocketListRoutingLogic, RocketListDataPassing
     
     // MARK: Routing
     
-    func routeToRocketDetail(segue: UIStoryboardSegue?) {
+    func routeToRocketDetail(segue: UIStoryboardSegue?, sender: Any) {
         if let segue = segue {
             let destinationVC = segue.destination as! RocketDetailViewController
             var destinationDS = destinationVC.router!.dataStore!
-            passDataTodetail(source: dataStore!, destination: &destinationDS)
+            let dict = sender as? [String:AnyObject]
+            if let detailId = (dict?["id"]) as? String {
+                passDataTodetail(source: dataStore!, destination: &destinationDS, id: detailId)
+            }
         }
     }
 
@@ -46,8 +49,8 @@ class RocketListRouter: NSObject, RocketListRoutingLogic, RocketListDataPassing
   
   // MARK: Passing data
   
-  func passDataTodetail(source: RocketListDataStore, destination: inout RocketDetailDataStore)
+    func passDataTodetail(source: RocketListDataStore, destination: inout RocketDetailDataStore, id: String)
   {
-      //destination.name = source.name
+      destination.id = id
   }
 }

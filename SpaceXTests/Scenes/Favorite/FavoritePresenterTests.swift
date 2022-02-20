@@ -15,55 +15,57 @@ import XCTest
 
 class FavoritePresenterTests: XCTestCase
 {
-  // MARK: Subject under test
-  
-  var sut: FavoritePresenter!
-  
-  // MARK: Test lifecycle
-  
-  override func setUp()
-  {
-    super.setUp()
-    setupFavoritePresenter()
-  }
-  
-  override func tearDown()
-  {
-    super.tearDown()
-  }
-  
-  // MARK: Test setup
-  
-  func setupFavoritePresenter()
-  {
-    sut = FavoritePresenter()
-  }
-  
-  // MARK: Test doubles
-  
-  class FavoriteDisplayLogicSpy: FavoriteDisplayLogic
-  {
-    var displaySomethingCalled = false
+    // MARK: Subject under test
     
-      func displayRocketList(viewModel: Favorite.getFavoriteList.ViewModel)
+    var sut: FavoritePresenter!
+    
+    // MARK: Test lifecycle
+    
+    override func setUp()
     {
-      displaySomethingCalled = true
+        super.setUp()
+        setupFavoritePresenter()
     }
-  }
-  
-  // MARK: Tests
-  
-  func testPresentSomething()
-  {
-    // Given
-    let spy = FavoriteDisplayLogicSpy()
-    sut.viewController = spy
-      let response = Favorite.getFavoriteList.Response(rocketList: [])
     
-    // When
-      sut.presentRoketList(response: response)
+    override func tearDown()
+    {
+        super.tearDown()
+    }
     
-    // Then
-    XCTAssertTrue(spy.displaySomethingCalled, "presentSomething(response:) should ask the view controller to display the result")
-  }
+    // MARK: Test setup
+    
+    func setupFavoritePresenter()
+    {
+        sut = FavoritePresenter()
+    }
+    
+    // MARK: Test doubles
+    
+    class FavoriteDisplayLogicSpy: FavoriteDisplayLogic
+    {
+        var displayRocketCalled = false
+        var viewModel: Favorite.getFavoriteList.ViewModel!
+        
+        func displayRocketList(viewModel: Favorite.getFavoriteList.ViewModel)
+        {
+            displayRocketCalled = true
+            self.viewModel = viewModel
+        }
+    }
+    
+    // MARK: Tests
+    
+    func testPresentSomething()
+    {
+      // Given
+      let spy = FavoriteDisplayLogicSpy()
+      sut.viewController = spy
+        let response = Favorite.getFavoriteList.Response(rocketList: [Seeds.Rockets.rocket1, Seeds.Rockets.rocket2])
+      
+      // When
+        sut.presentRoketList(response: response)
+      
+      // Then
+        XCTAssertTrue(spy.displayRocketCalled, "presentSomething(response:) should ask the view controller to display the result")
+    }
 }

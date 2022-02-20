@@ -13,7 +13,7 @@
         <!--Favorite-->
         <scene sceneID="yaK-Vk-sPu">
             <objects>
-                <viewController id="0K3-dL-VW3" customClass="FavoriteViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FavoriteViewController" id="0K3-dL-VW3" customClass="FavoriteViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XC9-TD-6bl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -339,7 +339,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="X0v-Pm-5Z4"/>
+        <segue reference="PKs-ZJ-IqX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="homeIconTab" width="27" height="26"/>

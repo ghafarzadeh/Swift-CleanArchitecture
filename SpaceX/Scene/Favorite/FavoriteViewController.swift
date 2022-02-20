@@ -105,6 +105,10 @@ class FavoriteViewController: UIViewController, FavoriteDisplayLogic
 
 extension FavoriteViewController : UITableViewDelegate, UITableViewDataSource {
     
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return rocketList.count
     }

@@ -11,6 +11,8 @@
 //
 
 import UIKit
+import ImageSlideshow
+import ImageSlideshowSDWebImage
 
 protocol RocketDetailDisplayLogic: class
 {
@@ -77,6 +79,9 @@ class RocketDetailViewController: UIViewController, RocketDetailDisplayLogic
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var btnFavorite: UIButton!
+    @IBOutlet weak var slideShow: ImageSlideshow!
+    
+    var bannerImages: [SDWebImageSource] = []
   
     func getDetail()
     {
@@ -91,6 +96,18 @@ class RocketDetailViewController: UIViewController, RocketDetailDisplayLogic
       let detail = viewModel.displayRocket
       self.lblName.text = detail.name
       self.lblDescription.text = detail.description
+            
+      for banner in detail.flickr_images {
+          if let url = URL(string: banner) {
+              bannerImages.append(SDWebImageSource(url: url))
+          }
+      }
+      
+      slideShow.layer.masksToBounds = true
+      slideShow.slideshowInterval = 5.0
+      slideShow.contentScaleMode = UIViewContentMode.scaleToFill
+      slideShow.activityIndicator = DefaultActivityIndicator()
+      slideShow.setImageInputs(bannerImages)
   }
     
     @IBAction func FavoriteAct(_ sender: Any) {

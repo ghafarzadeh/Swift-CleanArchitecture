@@ -78,7 +78,7 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="dU8-Yc-7Hc">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="410.5"/>
                                                         <subviews>
-                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mup-q7-5kW">
+                                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mup-q7-5kW" customClass="ImageSlideshow" customModule="ImageSlideshow">
                                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="207"/>
                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                 <constraints>
@@ -187,6 +187,7 @@
                         <outlet property="btnFavorite" destination="n2P-oJ-ZMs" id="Qxj-kV-VI6"/>
                         <outlet property="lblDescription" destination="D0l-bk-ziH" id="AV8-hQ-XKG"/>
                         <outlet property="lblName" destination="5d9-1i-asN" id="BJ5-ny-bl2"/>
+                        <outlet property="slideShow" destination="mup-q7-5kW" id="1Ta-XG-xwu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QVR-pA-nkI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

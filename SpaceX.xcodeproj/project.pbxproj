@@ -61,6 +61,8 @@
 		8183AF7727C184C6000E12CB /* RocketDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8183AF6727C184C6000E12CB /* RocketDetailInteractor.swift */; };
 		8183AF7827C184C6000E12CB /* RocketDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8183AF6727C184C6000E12CB /* RocketDetailInteractor.swift */; };
 		8183AF7927C184C6000E12CB /* RocketDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8183AF6727C184C6000E12CB /* RocketDetailInteractor.swift */; };
+		8191CA0527C28CC000EFC58C /* ImageSlideshow in Frameworks */ = {isa = PBXBuildFile; productRef = 8191CA0427C28CC000EFC58C /* ImageSlideshow */; };
+		8191CA0727C28CC000EFC58C /* ImageSlideshow/SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8191CA0627C28CC000EFC58C /* ImageSlideshow/SDWebImage */; };
 		81B1801727C0D767009C29B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1801627C0D767009C29B7 /* AppDelegate.swift */; };
 		81B1801927C0D767009C29B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1801827C0D767009C29B7 /* SceneDelegate.swift */; };
 		81B1801E27C0D767009C29B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B1801C27C0D767009C29B7 /* Main.storyboard */; };
@@ -179,7 +181,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				81B1804D27C0DA1E009C29B7 /* RxMoya in Frameworks */,
+				8191CA0527C28CC000EFC58C /* ImageSlideshow in Frameworks */,
 				81B1804927C0DA1E009C29B7 /* Moya in Frameworks */,
+				8191CA0727C28CC000EFC58C /* ImageSlideshow/SDWebImage in Frameworks */,
 				81B1805027C0DA86009C29B7 /* SDWebImage in Frameworks */,
 				81B1804B27C0DA1E009C29B7 /* ReactiveMoya in Frameworks */,
 			);
@@ -254,6 +258,13 @@
 			path = RocketDetail;
 			sourceTree = "<group>";
 		};
+		8191CA0827C296C900EFC58C /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
 		81B1800A27C0D766009C29B7 = {
 			isa = PBXGroup;
 			children = (
@@ -277,6 +288,7 @@
 		81B1801527C0D767009C29B7 /* SpaceX */ = {
 			isa = PBXGroup;
 			children = (
+				8191CA0827C296C900EFC58C /* Util */,
 				812A282327C0ECE1000DD1BB /* View */,
 				81B1805327C0DD21009C29B7 /* Models */,
 				81B1805227C0DB0B009C29B7 /* Scene */,
@@ -375,6 +387,8 @@
 				81B1804A27C0DA1E009C29B7 /* ReactiveMoya */,
 				81B1804C27C0DA1E009C29B7 /* RxMoya */,
 				81B1804F27C0DA86009C29B7 /* SDWebImage */,
+				8191CA0427C28CC000EFC58C /* ImageSlideshow */,
+				8191CA0627C28CC000EFC58C /* ImageSlideshow/SDWebImage */,
 			);
 			productName = SpaceX;
 			productReference = 81B1801327C0D767009C29B7 /* SpaceX.app */;
@@ -451,6 +465,7 @@
 			packageReferences = (
 				81B1804727C0DA1D009C29B7 /* XCRemoteSwiftPackageReference "Moya" */,
 				81B1804E27C0DA85009C29B7 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				8191CA0327C28CBF00EFC58C /* XCRemoteSwiftPackageReference "ImageSlideshow" */,
 			);
 			productRefGroup = 81B1801427C0D767009C29B7 /* Products */;
 			projectDirPath = "";
@@ -934,6 +949,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		8191CA0327C28CBF00EFC58C /* XCRemoteSwiftPackageReference "ImageSlideshow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zvonicek/ImageSlideshow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.2;
+			};
+		};
 		81B1804727C0DA1D009C29B7 /* XCRemoteSwiftPackageReference "Moya" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Moya/Moya.git";
@@ -953,6 +976,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8191CA0427C28CC000EFC58C /* ImageSlideshow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8191CA0327C28CBF00EFC58C /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow;
+		};
+		8191CA0627C28CC000EFC58C /* ImageSlideshow/SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8191CA0327C28CBF00EFC58C /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow/SDWebImage;
+		};
 		81B1804827C0DA1E009C29B7 /* Moya */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 81B1804727C0DA1D009C29B7 /* XCRemoteSwiftPackageReference "Moya" */;

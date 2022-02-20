@@ -34,7 +34,9 @@ class FavoriteInteractor: FavoriteBusinessLogic, FavoriteDataStore
     {
         worker = RocketWorker()
         worker?.getRocketList(completionHandler: { response in
-            let response = RocketList.getRocketList.Response(rocketList: response)
+            let allFavorite = Defaults.shared.getRockets()
+            let filter = response.filter{ allFavorite.contains($0.id) }
+            let response = Favorite.getFavoriteList.Response(rocketList: filter)
             self.presenter?.presentRoketList(response: response)
         }, failure: { (error) in
             print(error)

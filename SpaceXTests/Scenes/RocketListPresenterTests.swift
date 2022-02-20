@@ -45,10 +45,15 @@ class RocketListPresenterTests: XCTestCase
     {
       
     var displayRocketCalled = false
+      
+      // MARK: Argument expectations
+      
+      var viewModel: RocketList.getRocketList.ViewModel!
     
       func displayRocketList(viewModel: RocketList.getRocketList.ViewModel)
     {
         displayRocketCalled = true
+        self.viewModel = viewModel
     }
   }
   
@@ -59,7 +64,7 @@ class RocketListPresenterTests: XCTestCase
     // Given
     let spy = RocketListDisplayLogicSpy()
     sut.viewController = spy
-      let response = RocketList.getRocketList.Response(rocketList: [])
+      let response = RocketList.getRocketList.Response(rocketList: [Seeds.Rockets.rocket1, Seeds.Rockets.rocket2])
     
     // When
       sut.presentRoketList(response: response)

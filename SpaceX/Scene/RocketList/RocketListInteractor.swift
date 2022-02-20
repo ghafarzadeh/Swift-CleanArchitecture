@@ -34,7 +34,6 @@ class RocketListInteractor: RocketListBusinessLogic, RocketListDataStore
     
     func getRockestList(request: RocketList.getRocketList.Request)
     {
-        //worker = RocketWorker()
         worker.getRocketList(completionHandler: { response in
             let response = RocketList.getRocketList.Response(rocketList: response)
             self.presenter?.presentRoketList(response: response)

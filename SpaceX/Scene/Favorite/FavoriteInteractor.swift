@@ -14,28 +14,30 @@ import UIKit
 
 protocol FavoriteBusinessLogic
 {
-  func doSomething(request: Favorite.Something.Request)
+    func getRockestList(request: Favorite.Something.Request)
 }
 
 protocol FavoriteDataStore
 {
-  //var name: String { get set }
+    var rocketList : [Rocket]? {get}
 }
 
 class FavoriteInteractor: FavoriteBusinessLogic, FavoriteDataStore
 {
-  var presenter: FavoritePresentationLogic?
-  var worker: FavoriteWorker?
-  //var name: String = ""
-  
-  // MARK: Do something
-  
-  func doSomething(request: Favorite.Something.Request)
-  {
-    worker = FavoriteWorker()
-    worker?.doSomeWork()
+    var rocketList: [Rocket]?
+    var presenter: FavoritePresentationLogic?
+    var worker: RocketWorker?
     
-    let response = Favorite.Something.Response()
-    presenter?.presentSomething(response: response)
-  }
+    // MARK: Do something
+    
+    func getRockestList(request: Favorite.getFavoriteList.Request)
+    {
+        worker = RocketWorker()
+        worker?.getRocketList(completionHandler: { response in
+            let response = RocketList.getRocketList.Response(rocketList: response)
+            self.presenter?.presentRoketList(response: response)
+        }, failure: { (error) in
+            print(error)
+        })
+    }
 }

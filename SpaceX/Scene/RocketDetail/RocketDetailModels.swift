@@ -16,7 +16,7 @@ enum RocketDetail
 {
   // MARK: Use cases
   
-  enum Something
+  enum Roket
   {
     struct Request
     {

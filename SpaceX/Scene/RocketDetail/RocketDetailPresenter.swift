@@ -14,18 +14,20 @@ import UIKit
 
 protocol RocketDetailPresentationLogic
 {
-  func presentSomething(response: RocketDetail.Something.Response)
+    func presentDetail(response: RocketDetail.Roket.Response)
 }
 
 class RocketDetailPresenter: RocketDetailPresentationLogic
 {
-  weak var viewController: RocketDetailDisplayLogic?
-  
-  // MARK: Do something
-  
-  func presentSomething(response: RocketDetail.Something.Response)
-  {
-    let viewModel = RocketDetail.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
-  }
+    weak var viewController: RocketDetailDisplayLogic?
+    
+    // MARK: Do something
+    
+    func presentDetail(response: RocketDetail.Roket.Response)
+    {
+        let detail = response.rocket
+        let model = RocketDetail.Roket.ViewModel.DisplatRocket(id: detail.id, name: detail.name, description: detail.description, flickr_images: detail.flickrImages)
+        let viewModel = RocketDetail.Roket.ViewModel(displayRocket: model)
+        viewController?.displaySomething(viewModel: viewModel)
+    }
 }

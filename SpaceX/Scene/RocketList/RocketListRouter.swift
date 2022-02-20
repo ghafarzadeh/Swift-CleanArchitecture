@@ -39,18 +39,18 @@ class RocketListRouter: NSObject, RocketListRoutingLogic, RocketListDataPassing
             }
         }
     }
-
-  // MARK: Navigation
-  
-  //func navigateToSomewhere(source: RocketListViewController, destination: SomewhereViewController)
-  //{
-  //  source.show(destination, sender: nil)
-  //}
-  
-  // MARK: Passing data
-  
+    
+    // MARK: Navigation
+    
+    //func navigateToSomewhere(source: RocketListViewController, destination: SomewhereViewController)
+    //{
+    //  source.show(destination, sender: nil)
+    //}
+    
+    // MARK: Passing data
+    
     func passDataTodetail(source: RocketListDataStore, destination: inout RocketDetailDataStore, id: String)
-  {
-      destination.id = id
-  }
+    {
+        destination.id = id
+    }
 }

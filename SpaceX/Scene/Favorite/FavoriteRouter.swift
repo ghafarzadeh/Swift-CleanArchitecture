@@ -14,7 +14,7 @@ import UIKit
 
 @objc protocol FavoriteRoutingLogic
 {
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
+    func routeToRocketDetail(segue: UIStoryboardSegue?, sender: Any)
 }
 
 protocol FavoriteDataPassing
@@ -29,20 +29,16 @@ class FavoriteRouter: NSObject, FavoriteRoutingLogic, FavoriteDataPassing
   
   // MARK: Routing
   
-  //func routeToSomewhere(segue: UIStoryboardSegue?)
-  //{
-  //  if let segue = segue {
-  //    let destinationVC = segue.destination as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //  } else {
-  //    let storyboard = UIStoryboard(name: "Main", bundle: nil)
-  //    let destinationVC = storyboard.instantiateViewController(withIdentifier: "SomewhereViewController") as! SomewhereViewController
-  //    var destinationDS = destinationVC.router!.dataStore!
-  //    passDataToSomewhere(source: dataStore!, destination: &destinationDS)
-  //    navigateToSomewhere(source: viewController!, destination: destinationVC)
-  //  }
-  //}
+    func routeToRocketDetail(segue: UIStoryboardSegue?, sender: Any) {
+        if let segue = segue {
+            let destinationVC = segue.destination as! RocketDetailViewController
+            var destinationDS = destinationVC.router!.dataStore!
+            let dict = sender as? [String:AnyObject]
+            if let detailId = (dict?["id"]) as? String {
+                passDataTodetail(source: dataStore!, destination: &destinationDS, id: detailId)
+            }
+        }
+    }
 
   // MARK: Navigation
   
@@ -53,8 +49,8 @@ class FavoriteRouter: NSObject, FavoriteRoutingLogic, FavoriteDataPassing
   
   // MARK: Passing data
   
-  //func passDataToSomewhere(source: FavoriteDataStore, destination: inout SomewhereDataStore)
-  //{
-  //  destination.name = source.name
-  //}
+    func passDataTodetail(source: FavoriteDataStore, destination: inout RocketDetailDataStore, id: String)
+  {
+      destination.id = id
+  }
 }

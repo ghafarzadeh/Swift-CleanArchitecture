@@ -83,6 +83,8 @@ class RocketDetailViewController: UIViewController, RocketDetailDisplayLogic
     
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
+    @IBOutlet weak var lblCompany: UILabel!
+    @IBOutlet weak var lblCountry: UILabel!
     @IBOutlet weak var btnFavorite: UIButton!
     @IBOutlet weak var slideShow: ImageSlideshow!
     
@@ -102,6 +104,8 @@ class RocketDetailViewController: UIViewController, RocketDetailDisplayLogic
         self.rocketDetail = viewModel.displayRocket
         let detail = viewModel.displayRocket
         self.lblName.text = detail.name
+        self.lblCompany.text = detail.company
+        self.lblCountry.text = detail.country
         self.lblDescription.text = detail.description
         
         for banner in detail.flickr_images {

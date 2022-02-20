@@ -33,6 +33,8 @@ enum RocketDetail
             var name : String
             var description : String
             var flickr_images : [String]
+            var country: String
+            var company: String
         }
         var displayRocket: DisplatRocket
     }

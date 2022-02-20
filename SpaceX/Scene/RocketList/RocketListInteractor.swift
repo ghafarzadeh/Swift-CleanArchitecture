@@ -27,15 +27,15 @@ class RocketListInteractor: RocketListBusinessLogic, RocketListDataStore
     
     var rocketList: [Rocket]?
     var presenter: RocketListPresentationLogic?
-    var worker: RocketWorker?
+    var worker = RocketWorker()
     //var name: String = ""
     
     // MARK: Do something
     
     func getRockestList(request: RocketList.getRocketList.Request)
     {
-        worker = RocketWorker()
-        worker?.getRocketList(completionHandler: { response in
+        //worker = RocketWorker()
+        worker.getRocketList(completionHandler: { response in
             let response = RocketList.getRocketList.Response(rocketList: response)
             self.presenter?.presentRoketList(response: response)
         }, failure: { (error) in

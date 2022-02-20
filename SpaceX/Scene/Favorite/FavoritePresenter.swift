@@ -27,7 +27,7 @@ class FavoritePresenter: FavoritePresentationLogic
   {
       var list: [Favorite.getFavoriteList.ViewModel.DisplayRocketList] = []
       for rocket in response.rocketList {
-          let model = Favorite.getFavoriteList.ViewModel.DisplayRocketList(id: rocket.id, name: rocket.name, description: rocket.description, flickr_images: rocket.flickrImages)
+          let model = Favorite.getFavoriteList.ViewModel.DisplayRocketList(id: rocket.id ?? "", name: rocket.name ?? "", description: rocket.description ?? "", flickr_images: rocket.flickrImages ?? [])
           list.append(model)
       }
       let viewModel = Favorite.getFavoriteList.ViewModel(displayRocketList: list)

@@ -23,6 +23,8 @@ extension RocketStoreProtocol {
 
 class RocketWorker : RocketStoreProtocol {
     
+    public init () {}
+    
     func getRocketList(completionHandler:@escaping RocketListHandler, failure:@escaping ErrorHandler) {
         NetworkManager.shared.request(SpaceXService.getRocketList) { (response : [Rocket]) in
             completionHandler(response)

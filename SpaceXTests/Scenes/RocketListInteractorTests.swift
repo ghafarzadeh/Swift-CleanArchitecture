@@ -15,54 +15,72 @@ import XCTest
 
 class RocketListInteractorTests: XCTestCase
 {
-  // MARK: Subject under test
-  
-  var sut: RocketListInteractor!
-  
-  // MARK: Test lifecycle
-  
-  override func setUp()
-  {
-    super.setUp()
-    setupRocketListInteractor()
-  }
-  
-  override func tearDown()
-  {
-    super.tearDown()
-  }
-  
-  // MARK: Test setup
-  
-  func setupRocketListInteractor()
-  {
-    sut = RocketListInteractor()
-  }
-  
-  // MARK: Test doubles
-  
-  class RocketListPresentationLogicSpy: RocketListPresentationLogic
+    // MARK: Subject under test
+    
+    var sut: RocketListInteractor!
+    
+    // MARK: Test lifecycle
+    
+    override func setUp()
     {
-      var presentRocketCalled = false
-      
-      func presentRoketList(response: RocketList.getRocketList.Response) {
-          presentRocketCalled = true
-      }
-  }
-  
-  // MARK: Tests
-  
-  func testDoSomething()
-  {
-    // Given
-    let spy = RocketListPresentationLogicSpy()
-    sut.presenter = spy
-      let request = RocketList.getRocketList.Request()
+        super.setUp()
+        setupRocketListInteractor()
+    }
     
-    // When
-      sut.getRockestList(request: request)
+    override func tearDown()
+    {
+        super.tearDown()
+    }
     
-    // Then
-      XCTAssertTrue(spy.presentRocketCalled, "doSomething(request:) should ask the presenter to format the result")
-  }
+    // MARK: Test setup
+    
+    func setupRocketListInteractor()
+    {
+        sut = RocketListInteractor()
+    }
+    
+    // MARK: Test doubles
+    
+    class RocketListPresentationLogicSpy: RocketListPresentationLogic
+    {
+        var presentRocketCalled = false
+        
+        func presentRoketList(response: RocketList.getRocketList.Response) {
+            presentRocketCalled = true
+        }
+    }
+    
+    class RocketsWorkerSpy: RocketWorker
+    {
+        // MARK: Method call expectations
+        
+        var fetchRocketCalled = false
+        
+        // MARK: Spied methods
+        
+        override func getRocketList(completionHandler: @escaping RocketListHandler, failure: @escaping ErrorHandler) {
+            fetchRocketCalled = true
+            let list: [Rocket] = [Seeds.Rockets.rocket1, Seeds.Rockets.rocket2]
+            completionHandler(list)
+        }
+    }
+    
+    // MARK: Tests
+    
+    func testFetchRocketShouldAskRocketWorkerToFetchRocketsAndPresenterToFormatResult()
+    {
+        // Given
+        let rocketListPresentationLogicSpy = RocketListPresentationLogicSpy()
+        sut.presenter = rocketListPresentationLogicSpy
+        let rocketsWorkerSpy = RocketsWorkerSpy()
+        sut.worker = rocketsWorkerSpy
+        
+        // When
+        let request = RocketList.getRocketList.Request()
+        sut.getRockestList(request: request)
+        
+        // Then
+        XCTAssert(rocketsWorkerSpy.fetchRocketCalled, "fetch rocket")
+        XCTAssert(rocketListPresentationLogicSpy.presentRocketCalled, "rocket result")
+    }
 }

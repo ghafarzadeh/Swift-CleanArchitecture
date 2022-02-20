@@ -27,7 +27,7 @@ class RocketListPresenter: RocketListPresentationLogic
   {
       var list: [RocketList.getRocketList.ViewModel.DisplayRocketList] = []
       for rocket in response.rocketList {
-          let model = RocketList.getRocketList.ViewModel.DisplayRocketList(id: rocket.id, name: rocket.name, description: rocket.description, flickr_images: rocket.flickrImages)
+          let model = RocketList.getRocketList.ViewModel.DisplayRocketList(id: rocket.id ?? "", name: rocket.name ?? "", description: rocket.description ?? "", flickr_images: rocket.flickrImages ?? [])
           list.append(model)
       }
       let viewModel = RocketList.getRocketList.ViewModel(displayRocketList: list)

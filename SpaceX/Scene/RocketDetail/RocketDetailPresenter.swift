@@ -26,7 +26,7 @@ class RocketDetailPresenter: RocketDetailPresentationLogic
     func presentDetail(response: RocketDetail.Roket.Response)
     {
         let detail = response.rocket
-        let model = RocketDetail.Roket.ViewModel.DisplatRocket(id: detail.id, name: detail.name, description: detail.description, flickr_images: detail.flickrImages, country: detail.country, company: detail.company)
+        let model = RocketDetail.Roket.ViewModel.DisplatRocket(id: detail.id ?? "", name: detail.name ?? "", description: detail.description ?? "", flickr_images: detail.flickrImages ?? [], country: detail.country ?? "", company: detail.company ?? "")
         let viewModel = RocketDetail.Roket.ViewModel(displayRocket: model)
         viewController?.displayDetail(viewModel: viewModel)
     }

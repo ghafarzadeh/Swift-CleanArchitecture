@@ -15,13 +15,13 @@ struct Rocket: Codable {
     let engines: Engines?
     let landingLegs: LandingLegs?
     let payloadWeights: [PayloadWeight]?
-    let flickrImages: [String]
-    let name, type: String
-    let active: Bool
-    let stages, boosters, costPerLaunch, successRatePct: Int
-    let firstFlight, country, company: String
-    let wikipedia: String
-    let description, id: String
+    let flickrImages: [String]?
+    let name, type: String?
+    let active: Bool?
+    let stages, boosters, costPerLaunch, successRatePct: Int?
+    let firstFlight, country, company: String?
+    let wikipedia: String?
+    let description, id: String?
 
     enum CodingKeys: String, CodingKey {
         case height, diameter, mass

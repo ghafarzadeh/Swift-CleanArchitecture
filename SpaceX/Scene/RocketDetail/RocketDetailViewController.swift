@@ -71,6 +71,11 @@ class RocketDetailViewController: UIViewController, RocketDetailDisplayLogic
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //getDetail()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         getDetail()
     }
     

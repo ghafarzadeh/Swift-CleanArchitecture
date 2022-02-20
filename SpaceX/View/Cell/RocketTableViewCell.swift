@@ -43,8 +43,27 @@ class RocketTableViewCell: UITableViewCell {
         }
     }
     
+    var favoriteModel: Favorite.getFavoriteList.ViewModel.DisplayRocketList! {
+        didSet {
+            self.lblName.text = favoriteModel.name
+            self.lblDescription.text = favoriteModel.description
+            if let imgLink = favoriteModel.flickr_images.first, let url = URL(string: imgLink) {
+                self.img.sd_setImage(with: url)
+            }
+            if Defaults.shared.isRocketExist(favoriteModel.id) {
+                btnStar.setImage(UIImage(named: "starFillIcon"), for: .normal)
+            }else {
+                btnStar.setImage(UIImage(named: "starEmptyIcon"), for: .normal)
+            }
+        }
+    }
+    
     @IBAction func favAct(_ sender: Any) {
-        delegate?.saveRocket(rocket: self.model)
+        if self.model != nil {
+            delegate?.saveRocket(rocketId: self.model.id)
+        }else {
+            delegate?.saveRocket(rocketId: self.favoriteModel.id)
+        }
     }
     
 }

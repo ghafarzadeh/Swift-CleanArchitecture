@@ -14,76 +14,126 @@ import UIKit
 
 protocol FavoriteDisplayLogic: class
 {
-  func displaySomething(viewModel: Favorite.Something.ViewModel)
+    func displayRocketList(viewModel: Favorite.getFavoriteList.ViewModel)
 }
 
 class FavoriteViewController: UIViewController, FavoriteDisplayLogic
 {
-  var interactor: FavoriteBusinessLogic?
-  var router: (NSObjectProtocol & FavoriteRoutingLogic & FavoriteDataPassing)?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder)
-  {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup()
-  {
-    let viewController = self
-    let interactor = FavoriteInteractor()
-    let presenter = FavoritePresenter()
-    let router = FavoriteRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    var interactor: FavoriteBusinessLogic?
+    var router: (NSObjectProtocol & FavoriteRoutingLogic & FavoriteDataPassing)?
+    
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
-  }
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    doSomething()
-  }
-  
-  // MARK: Do something
-  
-  @IBOutlet weak var tableView: UITableView!
-  
-  func doSomething()
-  {
-    let request = Favorite.Something.Request()
-    interactor?.doSomething(request: request)
-  }
-  
-  func displaySomething(viewModel: Favorite.Something.ViewModel)
-  {
-    //nameTextField.text = viewModel.name
-  }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup()
+    {
+        let viewController = self
+        let interactor = FavoriteInteractor()
+        let presenter = FavoritePresenter()
+        let router = FavoriteRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+    
+    // MARK: Routing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let scene = segue.identifier {
+            if let router = router {
+                router.routeToRocketDetail(segue: segue, sender: sender)
+            }
+        }
+    }
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        setUpScreen()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        getRocketList()
+    }
+    
+    // MARK: Do something
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    private let rocketCellIdentifier = String(describing: RocketTableViewCell.self)
+    var rocketList: [Favorite.getFavoriteList.ViewModel.DisplayRocketList] = []
+    
+    func setUpScreen() {
+        tableView.register(UINib(nibName: "RocketTableViewCell", bundle: nil), forCellReuseIdentifier: rocketCellIdentifier)
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
+    func getRocketList()
+    {
+        let request = Favorite.getFavoriteList.Request()
+        interactor?.getRockestList(request: request)
+    }
+    
+    func displayRocketList(viewModel: Favorite.getFavoriteList.ViewModel)
+    {
+        self.rocketList = viewModel.displayRocketList
+        self.tableView.reloadData()
+    }
+    
+}
+
+extension FavoriteViewController : UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return rocketList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "RocketTableViewCell", for: indexPath) as! RocketTableViewCell
+        let data = self.rocketList[indexPath.row]
+        cell.delegate = self
+        cell.favoriteModel = data
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let id = rocketList[indexPath.row].id
+        performSegue(withIdentifier: "goDetail", sender: ["id" : id ] )
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 150
+    }
+}
+
+extension FavoriteViewController: FavoriteRocketProtocol {
+    func saveRocket(rocketId: String) {
+        if Defaults.shared.isRocketExist(rocketId) {
+            Defaults.shared.removeRocket(rocketId)
+        }else {
+            Defaults.shared.save(rocketId)
+        }
+        self.getRocketList()
+    }
 }

@@ -13,7 +13,7 @@
 import UIKit
 
 protocol FavoriteRocketProtocol {
-    func saveRocket(rocket: RocketList.getRocketList.ViewModel.DisplayRocketList)
+    func saveRocket(rocketId: String)
 }
 
 protocol RocketListDisplayLogic: class
@@ -132,11 +132,11 @@ extension RocketListViewController : UITableViewDelegate, UITableViewDataSource 
 }
 
 extension RocketListViewController: FavoriteRocketProtocol {
-    func saveRocket(rocket: RocketList.getRocketList.ViewModel.DisplayRocketList) {
-        if Defaults.shared.isRocketExist(rocket.id) {
-            Defaults.shared.removeRocket(rocket.id)
+    func saveRocket(rocketId: String) {
+        if Defaults.shared.isRocketExist(rocketId) {
+            Defaults.shared.removeRocket(rocketId)
         }else {
-            Defaults.shared.save(rocket.id)
+            Defaults.shared.save(rocketId)
         }
         self.tableView.reloadData()
     }

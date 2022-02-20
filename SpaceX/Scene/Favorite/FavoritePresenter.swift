@@ -14,7 +14,7 @@ import UIKit
 
 protocol FavoritePresentationLogic
 {
-  func presentSomething(response: Favorite.Something.Response)
+    func presentRoketList(response: Favorite.getFavoriteList.Response)
 }
 
 class FavoritePresenter: FavoritePresentationLogic
@@ -23,9 +23,14 @@ class FavoritePresenter: FavoritePresentationLogic
   
   // MARK: Do something
   
-  func presentSomething(response: Favorite.Something.Response)
+    func presentRoketList(response: Favorite.getFavoriteList.Response)
   {
-    let viewModel = Favorite.Something.ViewModel()
-    viewController?.displaySomething(viewModel: viewModel)
+      var list: [Favorite.getFavoriteList.ViewModel.DisplayRocketList] = []
+      for rocket in response.rocketList {
+          let model = Favorite.getFavoriteList.ViewModel.DisplayRocketList(id: rocket.id, name: rocket.name, description: rocket.description, flickr_images: rocket.flickrImages)
+          list.append(model)
+      }
+      let viewModel = Favorite.getFavoriteList.ViewModel(displayRocketList: list)
+      viewController?.displayRocketList(viewModel: viewModel)
   }
 }

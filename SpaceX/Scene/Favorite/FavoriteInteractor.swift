@@ -26,14 +26,13 @@ class FavoriteInteractor: FavoriteBusinessLogic, FavoriteDataStore
 {
     var rocketList: [Rocket]?
     var presenter: FavoritePresentationLogic?
-    var worker: RocketWorker?
+    var worker = RocketWorker()
     
     // MARK: Do something
     
     func getRockestList(request: Favorite.getFavoriteList.Request)
     {
-        worker = RocketWorker()
-        worker?.getRocketList(completionHandler: { response in
+        worker.getRocketList(completionHandler: { response in
             let allFavorite = Defaults.shared.getRockets()
             let filter = response.filter{ allFavorite.contains($0.id ?? "") }
             let response = Favorite.getFavoriteList.Response(rocketList: filter)

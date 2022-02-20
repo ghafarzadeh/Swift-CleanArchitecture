@@ -43,27 +43,45 @@ class FavoriteInteractorTests: XCTestCase
   
   class FavoritePresentationLogicSpy: FavoritePresentationLogic
   {
-    var presentSomethingCalled = false
+    var presentFavoriteCalled = false
     
       func presentRoketList(response: Favorite.getFavoriteList.Response)
     {
-      presentSomethingCalled = true
+        presentFavoriteCalled = true
     }
   }
+    
+    class RocketsWorkerSpy: RocketWorker
+    {
+        // MARK: Method call expectations
+        
+        var fetchRocketCalled = false
+        
+        // MARK: Spied methods
+        
+        override func getRocketList(completionHandler: @escaping RocketListHandler, failure: @escaping ErrorHandler) {
+            fetchRocketCalled = true
+            let list: [Rocket] = [Seeds.Rockets.rocket1, Seeds.Rockets.rocket2]
+            completionHandler(list)
+        }
+    }
   
   // MARK: Tests
   
-  func testDoSomething()
-  {
-    // Given
-    let spy = FavoritePresentationLogicSpy()
-    sut.presenter = spy
-      let request = Favorite.getFavoriteList.Request()
-    
-    // When
-      sut.getRockestList(request: request)
-    
-    // Then
-    XCTAssertTrue(spy.presentSomethingCalled, "doSomething(request:) should ask the presenter to format the result")
-  }
+    func testFetchRocketShouldAskRocketWorkerToFetchRocketsAndPresenterToFormatResult()
+    {
+        // Given
+        let favoritePresentationLogicSpy = FavoritePresentationLogicSpy()
+        sut.presenter = favoritePresentationLogicSpy
+        let rocketsWorkerSpy = RocketsWorkerSpy()
+        sut.worker = rocketsWorkerSpy
+        
+        // When
+        let request = Favorite.getFavoriteList.Request()
+        sut.getRockestList(request: request)
+        
+        // Then
+        XCTAssert(rocketsWorkerSpy.fetchRocketCalled, "fetch rocket")
+        XCTAssert(favoritePresentationLogicSpy.presentFavoriteCalled, "favorite result")
+    }
 }

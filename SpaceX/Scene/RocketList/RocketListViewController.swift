@@ -12,6 +12,10 @@
 
 import UIKit
 
+protocol FavoriteRocketProtocol {
+    func saveRocket(rocket: RocketList.getRocketList.ViewModel.DisplayRocketList)
+}
+
 protocol RocketListDisplayLogic: class
 {
     func displayRocketList(viewModel: RocketList.getRocketList.ViewModel)
@@ -112,6 +116,7 @@ extension RocketListViewController : UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RocketTableViewCell", for: indexPath) as! RocketTableViewCell
         let data = self.rocketList[indexPath.row]
+        cell.delegate = self
         cell.model = data
         return cell
     }
@@ -123,5 +128,16 @@ extension RocketListViewController : UITableViewDelegate, UITableViewDataSource 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
+    }
+}
+
+extension RocketListViewController: FavoriteRocketProtocol {
+    func saveRocket(rocket: RocketList.getRocketList.ViewModel.DisplayRocketList) {
+        if Defaults.shared.isRocketExist(rocket.id) {
+            Defaults.shared.removeRocket(rocket.id)
+        }else {
+            Defaults.shared.save(rocket.id)
+        }
+        self.tableView.reloadData()
     }
 }

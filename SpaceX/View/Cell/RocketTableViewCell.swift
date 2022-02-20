@@ -14,6 +14,8 @@ class RocketTableViewCell: UITableViewCell {
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var btnStar: UIButton!
     @IBOutlet weak var img: UIImageView!
+    
+    var delegate: FavoriteRocketProtocol?
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -33,11 +35,16 @@ class RocketTableViewCell: UITableViewCell {
             if let imgLink = model.flickr_images.first, let url = URL(string: imgLink) {
                 self.img.sd_setImage(with: url)
             }
+            if Defaults.shared.isRocketExist(model.id) {
+                btnStar.setImage(UIImage(named: "starFillIcon"), for: .normal)
+            }else {
+                btnStar.setImage(UIImage(named: "starEmptyIcon"), for: .normal)
+            }
         }
     }
     
     @IBAction func favAct(_ sender: Any) {
-        
+        delegate?.saveRocket(rocket: self.model)
     }
     
 }

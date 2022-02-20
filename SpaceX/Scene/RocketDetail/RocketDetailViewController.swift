@@ -21,68 +21,69 @@ protocol RocketDetailDisplayLogic: class
 
 class RocketDetailViewController: UIViewController, RocketDetailDisplayLogic
 {
-  var interactor: RocketDetailBusinessLogic?
-  var router: (NSObjectProtocol & RocketDetailRoutingLogic & RocketDetailDataPassing)?
-
-  // MARK: Object lifecycle
-  
-  override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
-  {
-    super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
-    setup()
-  }
-  
-  required init?(coder aDecoder: NSCoder)
-  {
-    super.init(coder: aDecoder)
-    setup()
-  }
-  
-  // MARK: Setup
-  
-  private func setup()
-  {
-    let viewController = self
-    let interactor = RocketDetailInteractor()
-    let presenter = RocketDetailPresenter()
-    let router = RocketDetailRouter()
-    viewController.interactor = interactor
-    viewController.router = router
-    interactor.presenter = presenter
-    presenter.viewController = viewController
-    router.viewController = viewController
-    router.dataStore = interactor
-  }
-  
-  // MARK: Routing
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-  {
-    if let scene = segue.identifier {
-      let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
-      if let router = router, router.responds(to: selector) {
-        router.perform(selector, with: segue)
-      }
+    var interactor: RocketDetailBusinessLogic?
+    var router: (NSObjectProtocol & RocketDetailRoutingLogic & RocketDetailDataPassing)?
+    
+    // MARK: Object lifecycle
+    
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
     }
-  }
-  
-  // MARK: View lifecycle
-  
-  override func viewDidLoad()
-  {
-    super.viewDidLoad()
-    getDetail()
-  }
-  
-  // MARK: Do something
-  
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
+    // MARK: Setup
+    
+    private func setup()
+    {
+        let viewController = self
+        let interactor = RocketDetailInteractor()
+        let presenter = RocketDetailPresenter()
+        let router = RocketDetailRouter()
+        viewController.interactor = interactor
+        viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+        router.viewController = viewController
+        router.dataStore = interactor
+    }
+    
+    // MARK: Routing
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let scene = segue.identifier {
+            let selector = NSSelectorFromString("routeTo\(scene)WithSegue:")
+            if let router = router, router.responds(to: selector) {
+                router.perform(selector, with: segue)
+            }
+        }
+    }
+    
+    // MARK: View lifecycle
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        getDetail()
+    }
+    
+    // MARK: Do something
+    
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var lblDescription: UILabel!
     @IBOutlet weak var btnFavorite: UIButton!
     @IBOutlet weak var slideShow: ImageSlideshow!
     
     var bannerImages: [SDWebImageSource] = []
-  
+    var rocketDetail : RocketDetail.Roket.ViewModel.DisplatRocket?
+    
     func getDetail()
     {
         if let id = self.router?.dataStore?.id {
@@ -90,27 +91,46 @@ class RocketDetailViewController: UIViewController, RocketDetailDisplayLogic
             interactor?.getDetail(request: request)
         }
     }
-  
+    
     func displayDetail(viewModel: RocketDetail.Roket.ViewModel)
-  {
-      let detail = viewModel.displayRocket
-      self.lblName.text = detail.name
-      self.lblDescription.text = detail.description
-            
-      for banner in detail.flickr_images {
-          if let url = URL(string: banner) {
-              bannerImages.append(SDWebImageSource(url: url))
-          }
-      }
-      
-      slideShow.layer.masksToBounds = true
-      slideShow.slideshowInterval = 5.0
-      slideShow.contentScaleMode = UIViewContentMode.scaleToFill
-      slideShow.activityIndicator = DefaultActivityIndicator()
-      slideShow.setImageInputs(bannerImages)
-  }
+    {
+        self.rocketDetail = viewModel.displayRocket
+        let detail = viewModel.displayRocket
+        self.lblName.text = detail.name
+        self.lblDescription.text = detail.description
+        
+        for banner in detail.flickr_images {
+            if let url = URL(string: banner) {
+                bannerImages.append(SDWebImageSource(url: url))
+            }
+        }
+        
+        slideShow.layer.masksToBounds = true
+        slideShow.slideshowInterval = 5.0
+        slideShow.contentScaleMode = UIViewContentMode.scaleToFill
+        slideShow.activityIndicator = DefaultActivityIndicator()
+        slideShow.setImageInputs(bannerImages)
+        setFavIcon()
+    }
+    
+    func setFavIcon() {
+        if let detail = rocketDetail {
+            if Defaults.shared.isRocketExist(detail.id) {
+                btnFavorite.setImage(UIImage(named: "starFillIcon"), for: .normal)
+            }else {
+                btnFavorite.setImage(UIImage(named: "starEmptyIcon"), for: .normal)
+            }
+        }
+    }
     
     @IBAction func FavoriteAct(_ sender: Any) {
-        
+        if let detail = rocketDetail {
+            if Defaults.shared.isRocketExist(detail.id) {
+                Defaults.shared.removeRocket(detail.id)
+            }else {
+                Defaults.shared.save(detail.id)
+            }
+            setFavIcon()
+        }
     }
 }

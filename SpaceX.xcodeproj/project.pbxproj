@@ -63,6 +63,9 @@
 		8183AF7927C184C6000E12CB /* RocketDetailInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8183AF6727C184C6000E12CB /* RocketDetailInteractor.swift */; };
 		8191CA0527C28CC000EFC58C /* ImageSlideshow in Frameworks */ = {isa = PBXBuildFile; productRef = 8191CA0427C28CC000EFC58C /* ImageSlideshow */; };
 		8191CA0727C28CC000EFC58C /* ImageSlideshow/SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 8191CA0627C28CC000EFC58C /* ImageSlideshow/SDWebImage */; };
+		8191CA0E27C2971800EFC58C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191CA0D27C2971800EFC58C /* Defaults.swift */; };
+		8191CA0F27C2971800EFC58C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191CA0D27C2971800EFC58C /* Defaults.swift */; };
+		8191CA1027C2971800EFC58C /* Defaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8191CA0D27C2971800EFC58C /* Defaults.swift */; };
 		81B1801727C0D767009C29B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1801627C0D767009C29B7 /* AppDelegate.swift */; };
 		81B1801927C0D767009C29B7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81B1801827C0D767009C29B7 /* SceneDelegate.swift */; };
 		81B1801E27C0D767009C29B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81B1801C27C0D767009C29B7 /* Main.storyboard */; };
@@ -149,6 +152,7 @@
 		8183AF6527C184C6000E12CB /* RocketDetailModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailModels.swift; sourceTree = "<group>"; };
 		8183AF6627C184C6000E12CB /* RocketDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailViewController.swift; sourceTree = "<group>"; };
 		8183AF6727C184C6000E12CB /* RocketDetailInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RocketDetailInteractor.swift; sourceTree = "<group>"; };
+		8191CA0D27C2971800EFC58C /* Defaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Defaults.swift; sourceTree = "<group>"; };
 		81B1801327C0D767009C29B7 /* SpaceX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceX.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		81B1801627C0D767009C29B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		81B1801827C0D767009C29B7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -261,6 +265,7 @@
 		8191CA0827C296C900EFC58C /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				8191CA0D27C2971800EFC58C /* Defaults.swift */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -514,6 +519,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81B1806527C0E1D1009C29B7 /* Thrust.swift in Sources */,
+				8191CA0E27C2971800EFC58C /* Defaults.swift in Sources */,
 				8183AF7727C184C6000E12CB /* RocketDetailInteractor.swift in Sources */,
 				81B1801727C0D767009C29B7 /* AppDelegate.swift in Sources */,
 				81B1805927C0E0FD009C29B7 /* Diameter.swift in Sources */,
@@ -556,6 +562,7 @@
 				812A284827C0FDC8000DD1BB /* RocketListInteractor.swift in Sources */,
 				81B1802E27C0D76B009C29B7 /* SpaceXTests.swift in Sources */,
 				81B1805E27C0E13F009C29B7 /* Engines.swift in Sources */,
+				8191CA0F27C2971800EFC58C /* Defaults.swift in Sources */,
 				81B1808227C0E371009C29B7 /* CompositeFairing.swift in Sources */,
 				8183AF6C27C184C6000E12CB /* RocketDetailWorker.swift in Sources */,
 				8183AF7527C184C6000E12CB /* RocketDetailViewController.swift in Sources */,
@@ -589,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81B1808327C0E371009C29B7 /* CompositeFairing.swift in Sources */,
+				8191CA1027C2971800EFC58C /* Defaults.swift in Sources */,
 				8183AF7927C184C6000E12CB /* RocketDetailInteractor.swift in Sources */,
 				81B1807B27C0E311009C29B7 /* SecondStage.swift in Sources */,
 				81B1806727C0E1D1009C29B7 /* Thrust.swift in Sources */,

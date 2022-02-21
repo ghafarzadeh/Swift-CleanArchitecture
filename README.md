@@ -46,6 +46,10 @@
 </ul>
 </li>
 
+### Application Architecture
+
+![cleanSwift](https://user-images.githubusercontent.com/13693120/155003921-0bc2b013-dcc6-4b16-a134-db8734712975.png)
+
 
 ### How to use
 
@@ -66,6 +70,7 @@
 ## License
 
 Distributed under the MIT License. See <a href="https://github.com/ghafarzadeh/SpaceX/blob/main/LICENSE">LICENSE.txt</a> for more information.
+![Uploading 1637937771758 (1).jpeg…]()
 
 
 

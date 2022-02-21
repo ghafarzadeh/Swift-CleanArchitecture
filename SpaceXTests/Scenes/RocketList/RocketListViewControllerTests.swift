@@ -76,6 +76,23 @@ class RocketListViewControllerTests: XCTestCase
     
     // MARK: Tests
     
+    func testTableViewHasDataSource() {
+        let tableViewSpy = TableViewSpy()
+        sut.tableView = tableViewSpy
+        sut.setUpScreen()
+        XCTAssertNotNil(sut.tableView.dataSource)
+    }
+    
+    func testTableViewConformsToTableViewDataSourceProtocol() {
+        let tableViewSpy = TableViewSpy()
+        sut.tableView = tableViewSpy
+        sut.setUpScreen()
+        XCTAssertTrue(sut.conforms(to: UITableViewDataSource.self))
+        XCTAssertTrue(sut.responds(to: #selector(sut.numberOfSections(in:))))
+        XCTAssertTrue(sut.responds(to: #selector(sut.tableView(_:numberOfRowsInSection:))))
+        XCTAssertTrue(sut.responds(to: #selector(sut.tableView(_:cellForRowAt:))))
+    }
+    
     func testShouldFetchRocketWhenViewDidAppear()
     {
         DispatchQueue.main.async {

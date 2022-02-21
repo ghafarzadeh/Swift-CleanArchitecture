@@ -25,15 +25,14 @@ protocol RocketDetailDataStore
 class RocketDetailInteractor: RocketDetailBusinessLogic, RocketDetailDataStore
 {
     var presenter: RocketDetailPresentationLogic?
-    var worker: RocketWorker?
+    var worker = RocketWorker()
     var id: String = ""
     
     // MARK: Do something
     
     func getDetail(request: RocketDetail.Roket.Request)
     {
-        worker = RocketWorker()
-        worker?.getRocketDetail(id: self.id, completionHandler: { detail in
+        worker.getRocketDetail(id: self.id, completionHandler: { detail in
             let response = RocketDetail.Roket.Response(rocket: detail)
             self.presenter?.presentDetail(response: response)
         }, failure: { error in

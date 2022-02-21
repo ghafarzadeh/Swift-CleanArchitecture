@@ -73,7 +73,7 @@ Distributed under the MIT License. See <a href="https://github.com/ghafarzadeh/S
 <!-- CONTACT -->
 ## Contact
 
-Habib Ghaffarzadeh - [@h_ghafarzadeh](https://twitter.com/h_ghafarzadeh) - habib.ghafarzadeh@gmail.com
+Habib Ghaffarzadeh - [LinkedIn](https://www.linkedin.com/in/habib-ghafarzadeh-b4303939/) - [Twitter](https://twitter.com/h_ghafarzadeh) - habib.ghafarzadeh@gmail.com
 
 <br />
 <br />

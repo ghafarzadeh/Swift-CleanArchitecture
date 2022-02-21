@@ -70,9 +70,6 @@
 ## License
 
 Distributed under the MIT License. See <a href="https://github.com/ghafarzadeh/SpaceX/blob/main/LICENSE">LICENSE.txt</a> for more information.
-![Uploading 1637937771758 (1).jpeg…]()
-
-
 
 
 <!-- CONTACT -->
